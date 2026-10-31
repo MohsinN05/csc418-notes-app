@@ -24,6 +24,7 @@ services:
     working_dir: /app
     environment:
       DB_HOST: db2
+      PYTHONDONTWRITEBYTECODE: "1"
     volumes:
       - ./:/app
     command: sh -c "pip install --no-cache-dir -r requirements.txt && python app.py"
